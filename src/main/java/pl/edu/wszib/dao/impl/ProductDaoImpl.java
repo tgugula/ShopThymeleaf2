@@ -19,22 +19,21 @@ public class ProductDaoImpl implements ProductDao {
         prepareProductList();
     }
 
-
-
-    @Override
-    public List<Product> getProducts() {
-        return new ArrayList<>(productMap.values());
-    }
-
     @Override
     public void saveProduct(Product product) {
         if(product.getId() < 1) {
             product.setId(id);
             id++;
         }
-
         productMap.put(product.getId(), product);
     }
+
+    @Override
+    public List<Product> getProducts() {
+        return new ArrayList<>(productMap.values());
+    }
+
+
 
     @Override
     public void removeProduct(Long id) {

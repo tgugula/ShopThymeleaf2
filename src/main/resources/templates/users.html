@@ -20,7 +20,8 @@
             <td th:text="${user.id}"></td>
             <td th:text="${user.login}"></td>
             <td th:text="${user.email}"></td>
-            <td th:text="|${#numbers.formatDecimal(user.age, 1, 0)} lat|"></td>
+            <!--<td th:text="|${#numbers.formatDecimal(user.age, 1, 0)} lat|"></td>-->
+            <td th:text="${user.age}"></td>
             <td th:text="${user.country}"></td>
             <td><span th:uk-icon="${user.active} ? 'check' : 'close' "></span></td>
             <td style="width: 250px">
@@ -32,7 +33,7 @@
     </table>
 
     <div>
-        <a th:href="@{/users/new}"><input style="background-color: #32d296; color: white" class="uk-button" value="Dodaj produkt" type="button"></a>
+        <a th:href="@{/users/new}"><input style="background-color: #32d296; color: white" class="uk-button" value="Dodaj użytkownika" type="button"></a>
     </div>
 </div>
 

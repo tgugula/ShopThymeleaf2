@@ -9,16 +9,12 @@
 <div class="container">
     <form style="width: 400px; margin: auto" th:object="${user}" th:action="@{/users/save}" method="post">
         <div class="uk-margin">
-            <label>ID</label>
-            <input th:field="*{id}" type="text" class=""uk-input>
-        </div>
-        <div class="uk-margin">
             <label>Login</label>
-            <input th:field="*{login}" type="text" class=""uk-input>
+            <input th:field="*{login}" type="text" class="uk-input">
         </div>
         <div class="uk-margin">
             <label>Email</label>
-            <input th:field="*{email}" type="text" class=""uk-input>
+            <input th:field="*{email}" type="text" class="uk-input">
         </div>
         <div class="uk-margin">
             <label>Wiek</label>
@@ -26,7 +22,7 @@
         </div>
         <div class="uk-margin">
             <label>Kraj</label>
-            <input th:field="*{country}" type="text" class=""uk-input>
+            <input th:field="*{country}" type="text" class="uk-input">
         </div>
         <div class="uk-margin">
             <label>Aktywność</label>
